@@ -9,6 +9,7 @@ import os
 
 import SV
 import utils
+import annotate
 from config import Config
 from trained_model.model import classify_INS
 
@@ -23,6 +24,7 @@ def format_info(k, v):
         return f"{k}={','.join(v)}"
     else:
         return f"{k}={v}"
+
 
 
 
@@ -117,9 +119,18 @@ class VCF:
         self.write_header_line('INFO=<ID=RNAMES,Number=.,Type=String,Description="Names of supporting reads, when enabled">')
         self.write_header_line('INFO=<ID=VAF,Number=1,Type=Float,Description="Fraction of supporting reads">')
         self.write_header_line('INFO=<ID=NM,Number=.,Type=Float,Description="Mismatch rate of supporting alignments">')
+        if self.config.annotate:
+            self.write_header_line('INFO=<ID=EN_MOTIF,Number=1,Type=String,Description="L1 endonuclease cleavage '
+                                   'consensus near the insertion point (5\'-TTTT/AA-3\' on the nicked strand), '
+                                   'reported as T-tract/A-tract; absent when no T/A junction is found">')
+            self.write_header_line('INFO=<ID=EN_STRAND,Number=1,Type=String,Description="Strand carrying the EN '
+                                   'cleavage motif (+ or -)">')
+            self.write_header_line('INFO=<ID=EN_OFFSET,Number=1,Type=Integer,Description="Signed distance in bp '
+                                   'between the EN cleavage junction and the insertion point (negative = junction '
+                                   'upstream of the insertion point)">')
         samples_header = "\t".join(sample_id for _, sample_id in self.config.sample_ids_vcf)
         self.write_raw(f"#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT\t{samples_header}")
-
+        
     def write_raw(self, text, endl="\n"):
         if self.config.vcf_output_bgz:
             self.handle.write(text.encode())
@@ -170,6 +181,17 @@ class VCF:
 
             if ac == 0:
                 call.filter = "GT"
+
+        # EN motif: L1 endonuclease cleavage consensus at the insertion site.
+        # Must run before the INFO string is assembled below, so the fields land
+        # in call.info in time.
+        if (self.config.annotate and call.svtype == "INS" and call.alt != '<INS>'
+                and self.reference_handle is not None):
+            en_hit = annotate.find_en_motif(self.reference_handle, call.contig, pos, self.config.en_motif_window)
+            if en_hit is not None:
+                call.set_info("EN_MOTIF", en_hit[0])
+                call.set_info("EN_STRAND", en_hit[1])
+                call.set_info("EN_OFFSET", en_hit[2])
 
         # Output core SV attributes
         infos = {

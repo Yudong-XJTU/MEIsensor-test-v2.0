@@ -15,7 +15,7 @@ import utils
 from utils import Region
 
 VERSION = "MEIsensor"
-BUILD = "1.0.0"
+BUILD = "2.0.0"
 
 
 class ArgFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawDescriptionHelpFormatter):
@@ -61,6 +61,50 @@ class Config(argparse.Namespace):
         main_args.add_argument("-m", "--model", metavar="model.ph", type=str,
                                help="(Required)Trained model")
 
+    def add_annotation_args(self, parser):
+        ann_args = parser.add_argument_group("Annotation parameters")
+
+        # master switch
+        ann_args.add_argument("--annotate", metavar="TRUE|FALSE", type=tobool, default=False,
+                              help="Annotate the MEI calls (default: False). When enabled, MEIsensor adds "
+                                   "the L1 endonuclease cleavage consensus at each insertion point to the "
+                                   "output VCF (INFO: EN_MOTIF, EN_STRAND, EN_OFFSET) and runs SVAN "
+                                   "(https://github.com/REPBIO-LAB/SVAN) on its calls, merging SVAN's MEI "
+                                   "annotations (family, strand, TSD, poly(A), conformation, transductions...) "
+                                   "into the output VCF INFO as SVAN_* fields. Requires --svan-path and the "
+                                   "SVAN resource files.")
+
+        # EN motif
+        ann_args.add_argument("--en-motif-window", metavar="N", type=int, default=25,
+                              help="Search window (bp) up/downstream of the insertion point for the L1 EN "
+                                   "cleavage consensus (5'-TTTT/AA-3'). Default: 25")
+
+        # SVAN
+        ann_args.add_argument("--svan-path", metavar="PATH", type=str, default=None,
+                              help="Path to the SVAN repository root (or its SVAN-INS.py), used by --annotate. "
+                                   "SVAN (https://github.com/REPBIO-LAB/SVAN) annotates mobile element family, "
+                                   "strand, TSD, poly(A), conformation, transductions... Requires trf, bwa, "
+                                   "minimap2 and paftools.js on the PATH.")
+        ann_args.add_argument("--svan-resources", metavar="DIR", type=str, default=None,
+                              help="Directory containing the SVAN resource files (VNTR*.bed, EXONS*.bed, "
+                                   "REPEATS*.bed, consensus FASTA; see https://zenodo.org/records/15229020 "
+                                   "for hg38/chm13 bundles).")
+        ann_args.add_argument("--svan-vntr", metavar="VNTR.bed", type=str, default=None,
+                              help="Explicit path to the SVAN VNTR annotation bed file.")
+        ann_args.add_argument("--svan-exons", metavar="EXONS.bed", type=str, default=None,
+                              help="Explicit path to the SVAN exon annotation bed file.")
+        ann_args.add_argument("--svan-repeats", metavar="REPEATS.bed", type=str, default=None,
+                              help="Explicit path to the SVAN RepeatMasker annotation bed file.")
+        ann_args.add_argument("--svan-consensus", metavar="CONSENSUS.fa", type=str, default=None,
+                              help="Explicit path to the retroelement consensus FASTA (needs a bwa index).")
+        ann_args.add_argument("--svan-trf", metavar="PATH", type=str, default="trf",
+                              help="Path to the Tandem Repeats Finder executable. Default: trf (from PATH)")
+        ann_args.add_argument("--svan-out", metavar="output.vcf", type=str, default=None,
+                              help="Output VCF with SVAN annotations. Default: <vcf>.svan.vcf next to the "
+                                   "MEIsensor VCF")
+        ann_args.add_argument("--svan-keep-tmp", action="store_true", default=False,
+                              help="Keep SVAN's temporary working directory (tmp/).")
+
     def __init__(self, *args, **kwargs):
         # super().__init__(**kwargs)
 
@@ -70,7 +114,8 @@ class Config(argparse.Namespace):
         parser.add_argument("--version", action="version", version=f"MEIsensor, Version {BUILD}")
 
         self.add_main_args(parser)
-        parser.parse_args(args=args or None, namespace=self)
+        self.add_annotation_args(parser)
+        parser.parse_args(args=list(args[0]) if args else None, namespace=self)
         '''
         self.input = kwargs.get("input", None)
         self.vcf = kwargs.get("vcf", None)
@@ -116,6 +161,19 @@ class Config(argparse.Namespace):
 
         # Additional parameter
         self.allow_overwrite = kwargs.get("allow_overwrite", False)
+
+        # Annotation parameters (CLI values win; kwargs defaults for programmatic construction)
+        self.annotate = kwargs.get("annotate", getattr(self, "annotate", False))
+        self.en_motif_window = kwargs.get("en_motif_window", getattr(self, "en_motif_window", 25))
+        self.svan_path = kwargs.get("svan_path", getattr(self, "svan_path", None))
+        self.svan_resources = kwargs.get("svan_resources", getattr(self, "svan_resources", None))
+        self.svan_vntr = kwargs.get("svan_vntr", getattr(self, "svan_vntr", None))
+        self.svan_exons = kwargs.get("svan_exons", getattr(self, "svan_exons", None))
+        self.svan_repeats = kwargs.get("svan_repeats", getattr(self, "svan_repeats", None))
+        self.svan_consensus = kwargs.get("svan_consensus", getattr(self, "svan_consensus", None))
+        self.svan_trf = kwargs.get("svan_trf", getattr(self, "svan_trf", "trf"))
+        self.svan_out = kwargs.get("svan_out", getattr(self, "svan_out", None))
+        self.svan_keep_tmp = kwargs.get("svan_keep_tmp", getattr(self, "svan_keep_tmp", False))
 
         # Postprocessing, QC and output parameters
         self.output_rnames = kwargs.get("output_rnames", False)
@@ -274,6 +332,21 @@ class Config(argparse.Namespace):
             self.qc_nm_measure = self.qc_nm_measure or self.mosaic_qc_nm
             # config.qc_nm_mult=config.mosaic_qc_nm_mult
             # config.qc_strand=config.mosaic_qc_strand
+
+        # Annotation setup (deferred until --symbolic and other output options are known)
+        if self.annotate:
+            if self.symbolic:
+                utils.fatal_error("--annotate requires sequence-resolved ALT sequences; it cannot be "
+                                  "combined with --symbolic.")
+            if self.svan_path is None:
+                utils.fatal_error("--annotate true requires --svan-path pointing at the SVAN repository "
+                                  "(https://github.com/REPBIO-LAB/SVAN).")
+            if self.svan_out is None:
+                if self.vcf:
+                    vcf_base = self.vcf[:-3] if self.vcf.endswith(".gz") else self.vcf
+                    self.svan_out = vcf_base + ".svan.vcf"
+                else:
+                    self.svan_out = "meisensor.svan.vcf"
 
     @property
     def sort(self) -> bool:

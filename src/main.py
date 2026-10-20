@@ -23,6 +23,7 @@ import pysam
 from config import Config
 import vcf
 import parallel_task
+import annotate
 import utils
 
 
@@ -413,6 +414,12 @@ def Main(processes: list[parallel_task.MEIsensorWorker]):
                 log.exception(f'Indexing failed.')
             else:
                 log.info(f"Indexing done in {time.time() - vcf_index_start_time:.2f}s.")
+
+    # Annotation (--annotate): SVAN MEI annotation + merge into the output VCF
+    if config.annotate:
+        svan_start_time = time.monotonic()
+        annotate.run_svan_annotation(config)
+        log.info(f"SVAN annotation finished in {time.monotonic() - svan_start_time:.2f}s.")
 
     log.info(f"Analysis finished in {time.monotonic() - analysis_start_time:.2f}s.")
     log.info("")

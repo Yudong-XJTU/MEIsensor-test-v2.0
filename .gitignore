@@ -4,3 +4,13 @@ __pycache__/
 *.iml
 .DS_Store
 cache/
+
+# local test outputs and run artifacts (not part of the release)
+test_output/
+*.svan_work/
+memory-*.csv
+smoke.MEI.vcf*
+final.MEI.vcf*
+
+# local leftover of the previous major version
+MEIsensor(V1.0)/
