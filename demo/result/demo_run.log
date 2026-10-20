@@ -1,0 +1,424 @@
+[2026-10-13 13:55:54] INFO    MEIsensor.main: Run mode: call_sample
+[2026-10-13 13:55:54] INFO    MEIsensor.main: Input: demo/data/HG00514.chr1_28-29Mb.demo.bam
+[2026-10-13 13:55:54] INFO    MEIsensor.main: Reference: /root/mei_work/ref/hg38.fa
+[2026-10-13 13:55:54] INFO    MEIsensor.main: Output: demo/result/demo.MEI.vcf (sorted)
+[2026-10-13 13:55:54] INFO    MEIsensor.main: 
+[2026-10-13 13:55:54] INFO    MEIsensor.main: Scanning 2424 aligned reads...
+[2026-10-13 13:55:54] INFO    MEIsensor.main: 
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 0 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7 started
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 0: started task #0 (194 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1: started task #1 (193 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2: started task #2 (192 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3: started task #3 (191 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4: started task #4 (190 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5: started task #5 (189 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6: started task #6 (188 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7: started task #7 (187 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1: finished task #1
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2: finished task #2
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3: finished task #3
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4: finished task #4
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5: finished task #5
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6: finished task #6
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7: finished task #7
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1: started task #8 (186 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2: started task #9 (185 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3: started task #10 (184 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4: started task #11 (183 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5: started task #12 (182 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6: started task #13 (181 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7: started task #14 (180 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1: finished task #8
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2: finished task #9
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3: finished task #10
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4: finished task #11
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5: finished task #12
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6: finished task #13
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7: finished task #14
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1: started task #15 (179 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2: started task #16 (178 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3: started task #17 (177 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4: started task #18 (176 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5: started task #19 (175 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6: started task #20 (174 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7: started task #21 (173 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 0: finished task #0
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1: finished task #15
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2: finished task #16
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3: finished task #17
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4: finished task #18
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5: finished task #19
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6: finished task #20
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7: finished task #21
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 0: started task #22 (172 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 1: started task #23 (171 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 2: started task #24 (170 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 3: started task #25 (169 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 4: started task #26 (168 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 5: started task #27 (167 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 6: started task #28 (166 tasks queued)
+[2026-10-13 13:55:54] INFO    MEIsensor.worker: Worker 7: started task #29 (165 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: finished task #22
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: finished task #23
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: finished task #24
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: finished task #25
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: finished task #26
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: finished task #27
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: finished task #28
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: finished task #29
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: started task #30 (164 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: started task #31 (163 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: started task #32 (162 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: started task #33 (161 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: started task #34 (160 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: started task #35 (159 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: started task #36 (158 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: started task #37 (157 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: finished task #30
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: finished task #31
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: finished task #32
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: finished task #33
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: finished task #34
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: finished task #35
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: finished task #36
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: finished task #37
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: started task #38 (156 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: started task #39 (155 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: started task #40 (154 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: started task #41 (153 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: started task #42 (152 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: started task #43 (151 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: started task #44 (150 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: started task #45 (149 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: finished task #38
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: finished task #39
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: finished task #40
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: finished task #41
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: finished task #42
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: finished task #43
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: finished task #44
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: finished task #45
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: started task #46 (148 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: started task #47 (147 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: started task #48 (146 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: started task #49 (145 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: started task #50 (144 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: started task #51 (143 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: started task #52 (142 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: started task #53 (141 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: finished task #46
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: finished task #47
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: finished task #48
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: finished task #49
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: finished task #50
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: finished task #51
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: finished task #52
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: finished task #53
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: started task #54 (140 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: started task #55 (139 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: started task #56 (138 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: started task #57 (137 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: started task #58 (136 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: started task #59 (135 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: started task #60 (134 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: started task #61 (133 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: finished task #54
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: finished task #55
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: finished task #56
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: finished task #57
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: finished task #58
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: finished task #59
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: finished task #60
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: finished task #61
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 0: started task #62 (132 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 1: started task #63 (131 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 2: started task #64 (130 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 3: started task #65 (129 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 4: started task #66 (128 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 5: started task #67 (127 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 6: started task #68 (126 tasks queued)
+[2026-10-13 13:55:55] INFO    MEIsensor.worker: Worker 7: started task #69 (125 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: finished task #62
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: finished task #63
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: finished task #64
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: finished task #65
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: finished task #66
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: finished task #67
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: finished task #68
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: finished task #69
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: started task #70 (124 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: started task #71 (123 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: started task #72 (122 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: started task #73 (121 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: started task #74 (120 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: started task #75 (119 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: started task #76 (118 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: started task #77 (117 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: finished task #70
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: finished task #71
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: finished task #72
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: finished task #73
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: finished task #74
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: finished task #75
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: finished task #76
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: finished task #77
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: started task #78 (116 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: started task #79 (115 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: started task #80 (114 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: started task #81 (113 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: started task #82 (112 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: started task #83 (111 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: started task #84 (110 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: started task #85 (109 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: finished task #78
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: finished task #79
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: finished task #80
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: finished task #81
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: finished task #82
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: finished task #83
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: finished task #84
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: finished task #85
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: started task #86 (108 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: started task #87 (107 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: started task #88 (106 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: started task #89 (105 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: started task #90 (104 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: started task #91 (103 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: started task #92 (102 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: started task #93 (101 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: finished task #86
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: finished task #87
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: finished task #88
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: finished task #89
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: finished task #90
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: finished task #91
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: finished task #92
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: finished task #93
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: started task #94 (100 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: started task #95 (99 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: started task #96 (98 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: started task #97 (97 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: started task #98 (96 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: started task #99 (95 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: started task #100 (94 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: started task #101 (93 tasks queued)
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 0: finished task #94
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 1: finished task #95
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 2: finished task #96
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 3: finished task #97
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 4: finished task #98
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 5: finished task #99
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 6: finished task #100
+[2026-10-13 13:55:56] INFO    MEIsensor.worker: Worker 7: finished task #101
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: started task #102 (92 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: started task #103 (91 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: started task #104 (90 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: started task #105 (89 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: started task #106 (88 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: started task #107 (87 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: started task #108 (86 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: started task #109 (85 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: finished task #102
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: finished task #103
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: finished task #104
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: finished task #105
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: finished task #106
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: finished task #107
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: finished task #108
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: finished task #109
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: started task #110 (84 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: started task #111 (83 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: started task #112 (82 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: started task #113 (81 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: started task #114 (80 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: started task #115 (79 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: started task #116 (78 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: started task #117 (77 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: finished task #110
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: finished task #111
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: finished task #112
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: finished task #113
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: finished task #114
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: finished task #115
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: finished task #116
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: finished task #117
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: started task #118 (76 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: started task #119 (75 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: started task #120 (74 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: started task #121 (73 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: started task #122 (72 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: started task #123 (71 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: started task #124 (70 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: started task #125 (69 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: finished task #118
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: finished task #119
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: finished task #120
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: finished task #121
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: finished task #122
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: finished task #123
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: finished task #124
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: finished task #125
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: started task #126 (68 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: started task #127 (67 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: started task #128 (66 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: started task #129 (65 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: started task #130 (64 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: started task #131 (63 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: started task #132 (62 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: started task #133 (61 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: finished task #126
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: finished task #127
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: finished task #128
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: finished task #129
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: finished task #130
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: finished task #131
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: finished task #132
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: finished task #133
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: started task #134 (60 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: started task #135 (59 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: started task #136 (58 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: started task #137 (57 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: started task #138 (56 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: started task #139 (55 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: started task #140 (54 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: started task #141 (53 tasks queued)
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 0: finished task #134
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 1: finished task #135
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 2: finished task #136
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 3: finished task #137
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 4: finished task #138
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 5: finished task #139
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 6: finished task #140
+[2026-10-13 13:55:57] INFO    MEIsensor.worker: Worker 7: finished task #141
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: started task #142 (52 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: started task #143 (51 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: started task #144 (50 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: started task #145 (49 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: started task #146 (48 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: started task #147 (47 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: started task #148 (46 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: started task #149 (45 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: finished task #142
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: finished task #143
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: finished task #144
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: finished task #145
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: finished task #146
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: finished task #147
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: finished task #148
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: finished task #149
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: started task #150 (44 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: started task #151 (43 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: started task #152 (42 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: started task #153 (41 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: started task #154 (40 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: started task #155 (39 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: started task #156 (38 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: started task #157 (37 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: finished task #150
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: finished task #151
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: finished task #152
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: finished task #153
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: finished task #154
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: finished task #155
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: finished task #156
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: finished task #157
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: started task #158 (36 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: started task #159 (35 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: started task #160 (34 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: started task #161 (33 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: started task #162 (32 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: started task #163 (31 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: started task #164 (30 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: started task #165 (29 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: finished task #158
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: finished task #159
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: finished task #160
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: finished task #161
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: finished task #162
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: finished task #163
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: finished task #164
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: finished task #165
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: started task #166 (28 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: started task #167 (27 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: started task #168 (26 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: started task #169 (25 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: started task #170 (24 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: started task #171 (23 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: started task #172 (22 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: started task #173 (21 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: finished task #166
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: finished task #167
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: finished task #168
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: finished task #169
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: finished task #170
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: finished task #171
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: finished task #172
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: finished task #173
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 0: started task #174 (20 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 1: started task #175 (19 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 2: started task #176 (18 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 3: started task #177 (17 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 4: started task #178 (16 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 5: started task #179 (15 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 6: started task #180 (14 tasks queued)
+[2026-10-13 13:55:58] INFO    MEIsensor.worker: Worker 7: started task #181 (13 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 0: finished task #174
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 1: finished task #175
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 2: finished task #176
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 3: finished task #177
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 4: finished task #178
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 5: finished task #179
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 6: finished task #180
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 7: finished task #181
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 0: started task #182 (12 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 1: started task #183 (11 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 2: started task #184 (10 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 3: started task #185 (9 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 4: started task #186 (8 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 5: started task #187 (7 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 6: started task #188 (6 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 7: started task #189 (5 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 0: finished task #182
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 1: finished task #183
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 2: finished task #184
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 3: finished task #185
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 4: finished task #186
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 5: finished task #187
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 6: finished task #188
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 7: finished task #189
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 0: started task #190 (4 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 1: started task #191 (3 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 2: started task #192 (2 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 3: started task #193 (1 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 4: started task #194 (0 tasks queued)
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 5: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 6: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 7: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 0: finished task #190
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 1: finished task #191
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 2: finished task #192
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 3: finished task #193
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 4: finished task #194
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 0: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 1: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 2: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 3: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 4: exiting
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 0: exited with code 0
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 1: exited with code 0
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 2: exited with code 0
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 3: exited with code 0
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 4: exited with code 0
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 5: exited with code 0
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 6: exited with code 0
+[2026-10-13 13:55:59] INFO    MEIsensor.worker: Worker 7: exited with code 0
+[2026-10-13 13:56:00] INFO    MEIsensor.main: Analysis finished in 6.51s.
+[2026-10-13 13:56:00] INFO    MEIsensor.main: 
+[2026-10-13 13:56:00] INFO    MEIsensor.main: Wrote 4 MEI calls to demo/result/demo.MEI.vcf (sorted)
